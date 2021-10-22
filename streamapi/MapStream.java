@@ -30,8 +30,21 @@ class MapStream{
         System.out.println(values.stream().filter(i->{
             System.out.println("hi");
             return true;
-        }).findFirst());
+        }).findFirst());  //findFirst will give optional 
+        // .findFirst().orElse(0); //to print smth else 
 
+        /**
+         * Once stream is used, we can not reuse it
+         * Stream<Integer>s=values.stream();
+         * s.forEach(System.out::println); //work
+         * s.forEach(System.out::println); // excep
+         */
+
+
+
+        // ------------------------------------------------------//
+        
+        /*
         Map <String,Integer> books=new HashMap<String,Integer>();
         Set<Map.Entry<Furniture,Integer>> entries=books.entrySet(); //obtain set of key-value pairs
         
@@ -45,7 +58,7 @@ class MapStream{
                                         .filter(e->"Head First Java".equals(e.getValue()))
                                         .map(Map.Entry::getKey)
                                         .findFirst();
-
+        */
 
         
     }
