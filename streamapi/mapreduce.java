@@ -5,6 +5,12 @@ import java.util.function.Function;
 import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
 
+
+/**
+ * Stream API Features
+ * Function, BinaryOperator Interface Lambda
+ * How System.out.println(values.stream().map(i->i*2).reduce(0,(c,e)->c+e)); is implemented
+ */
 public class mapreduce {
     public static void main(String[] args) {
         List <Integer>values=Arrays.asList(1,2,3,4,5,6);
@@ -64,6 +70,7 @@ public class mapreduce {
 
         // now to make these three lines into one line
         System.out.println(values.stream().map(i->i*2).reduce(0,(c,e)->c+e));
+        System.out.println(values.stream().map(i->i*2).reduce(0,Integer::sum)); //same
        }
     
 }

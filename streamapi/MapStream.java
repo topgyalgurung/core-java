@@ -40,6 +40,7 @@ class MapStream{
          * s.forEach(System.out::println); // excep
          */
 
+         // check mapreduce for stream api details
 
 
         // ------------------------------------------------------//
